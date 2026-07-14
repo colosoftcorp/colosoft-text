@@ -111,5 +111,10 @@ namespace Colosoft.Text
         {
             return new TextMessageFormattable(this.Text, this.Parameters);
         }
+
+        public static implicit operator TextMessageFormattable(string text)
+        {
+            return new TextMessageFormattable(text);
+        }
     }
 }
