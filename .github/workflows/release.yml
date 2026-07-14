@@ -10,19 +10,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup dotnet 8.0
+      - name: Setup dotnet 10.0
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: 10.0.x
 
       - name: Clean
-        run: dotnet clean -c Release
+        run: dotnet clean Colosoft.Text.slnx -c Release
 
       - name: Build
-        run: dotnet build -c Release
+        run: dotnet build Colosoft.Text.slnx -c Release
 
       - name: Build
-        run: dotnet pack -c Release
+        run: dotnet pack Colosoft.Text.slnx -c Release
         
       - name: Publish to Nuget.org
         run: dotnet nuget push ./output/Release/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://nuget.colosoft.com.br/v2

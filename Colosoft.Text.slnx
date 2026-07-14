@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Colosoft.Text/Colosoft.Text.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Colosoft.Text.Test/Colosoft.Text.Test.csproj" />
+  </Folder>
+</Solution>
